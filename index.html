@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElegantEStore</title>
+    <!-- Include Font Awesome for cart icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <h1>ElegantEStore</h1>
+        </div>
+        <div class="cart-icon" id="cartIcon">
+            <i class="fas fa-shopping-cart"></i> <!-- Font Awesome cart icon -->
+            <span id="cartCount">0</span> Items
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to ElegantEStore</h2>
+        <p>Find the perfect products for your lifestyle</p>
+    </section>
+
+    <!-- Product Listings -->
+    <div class="product-container">
+        <div class="product-card">
+            <img src="images/378a53245ce269d5a78c3431cc2a84ed.jpg" alt="Product 1">
+            <h3>Elegant Watch</h3>
+            <p class="price">$45.00</p>
+            <button class="add-to-cart" data-product-id="1" data-product-name="Elegant Watch" data-product-price="45" data-product-image="https://via.placeholder.com/200">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/sunglasses-glasses-sale-concept-trendy-260nw-2133622907.webp" alt="Product 2">
+            <h3>Stylish Sunglasses</h3>
+            <p class="price">$25.00</p>
+            <button class="add-to-cart" data-product-id="2" data-product-name="Stylish Sunglasses" data-product-price="25" data-product-image="https://via.placeholder.com/200">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="images/leather-bags-for-women.jpg" alt="Product 3">
+            <h3>Leather Bag</h3>
+            <p class="price">$100.00</p>
+            <button class="add-to-cart" data-product-id="3" data-product-name="Leather Bag" data-product-price="100" data-product-image="https://via.placeholder.com/200">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <h2>Your Cart</h2>
+            <ul id="cartItemsList"></ul>
+            <div class="cart-total">
+                <p>Total: $<span id="cartTotal">0.00</span></p>
+                <button id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+            <button id="closeCartBtn">Close</button>
+        </div>
+    </div>
+
+    <!-- Checkout Form Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-content">
+            <h2>Checkout</h2>
+            <form id="checkoutForm">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit" id="submitCheckout">Submit Order</button>
+            </form>
+            <button id="closeCheckoutBtn">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
